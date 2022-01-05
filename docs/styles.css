@@ -1,3 +1,10 @@
+:root {
+    --Color-1: #AC9878;
+    --Color-2: #F6011F;
+    --Color-3: #0105C2;
+    --Color-3-suave: #1F4497;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -30,10 +37,20 @@ html {
 }
 
 .contenedor .header{
-    background: #3be2ff;
+    background: var(--Color-1);
     color: #fff;
+    transition: 0.5s ease;
+    text-align: center;
     grid-column-start: 1;
     grid-column-end: 4;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+
+.contenedor .header:hover {
+    background: var(--Color-3-suave);
 }
 
 .contenedor .contenido {
