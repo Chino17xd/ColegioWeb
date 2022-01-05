@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;500&display=swap');
+
 :root {
     --Color-1: #AC9878;
-    --Color-2: #F6011F;
-    --Color-3: #0105C2;
+    --Color-2: hsl(353, 70%, 48%);
+    --Color-3: hsl(239, 80%, 38%);
     --Color-3-suave: #1F4497;
 }
 
@@ -13,7 +15,7 @@
 }
 
 html {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Signika Negative', sans-serif;
 }
 
 .contenedor {
@@ -50,36 +52,102 @@ html {
 }
 
 .contenedor .header:hover {
-    background: var(--Color-3-suave);
+    background: var(--Color-3);
 }
 
 .contenedor .contenido {
-    background: #259aaf;
+    background: var(--Color-3-suave);
     color: #fff;
+    font-size: 1.2em;
     grid-column: span 2;
 }
 
+.contenido_texto {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contenido_img {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contenido_texto_img1 {
+    width: 20vh;
+    height: 25vh;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.contenido_texto_img2 {
+    width: 20vw;
+    height: 23vh;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.contenido_texto_img1 img, 
+.contenido_texto_img2 img {
+    width: 100%;
+}
+
 .contenedor .sidebar {
-    background: #63c1d1;
+    background: var(--Color-3-suave);
     grid-column: 3/4;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.5s ease;
 
     grid-row: span 2;
 }
 
-.contenedor .footer {
-    grid-column: 1/4;
-    background: #259aaf;
+.contenedor .sidebar:hover {
+    background: var(--Color-1);
 }
+
+.sidebar .sidebar_logo {
+    width: 20vw;
+}
+
 
 .contenedor .widget-1,
 .contenedor .widget-2 {
-    background: #57acbb;
-    height: 20vh;
+    color: #fff;
+    font-size: 1.2em;
 
-    display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.contenedor .widget-1{
+    background: var(--Color-3);
+}
+
+.contenedor .widget-2 {
+    background: var(--Color-2);
+}
+
+.contenedor .widget-1 h2,
+.contenedor .widget-2 h2 {
+    text-align: center;
+} 
+
+.contenedor .widget-1 p,
+.contenedor .widget-2 p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+.contenedor .footer {
+    grid-column: 1/4;
+    background: #259aaf;
 }
